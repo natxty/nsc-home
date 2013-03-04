@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_title %}NSC Homepage{% endblock %}
+
+{% block page_header %}{% endblock %}
+
+{% block content %}
+<div id="wrapper" class="bkg-gradient slideshow-overlay">
+
+    
+        <div id="maximage">
+
+            {% for slide in matrix %}
+            <div class="slidepane">
+                <img src="{{ url_for('static', filename='images/' + slide.slide) }}" alt="" />
+            </div>
+            {% endfor %}
+        
+        </div><!--// end #maximage -->
+</div><!-- #wrapper -->
+
+<div class="slider_thumb" id="slider_thumb_left"></div>
+
+<div class="slider_thumb" id="slider_thumb_right"></div>
+
+{% endblock %}

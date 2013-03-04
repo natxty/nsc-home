@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--// Fonts //-->
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Libre+Baskerville|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <!--// remote css -->
+        <link rel="stylesheet" href="//cdn.oesmith.co.uk/morris-0.4.1.min.css">
+        <!--// local css -->
+        <link href="{{ url_for('static', filename='stylesheets/reset.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='stylesheets/maximage.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+        <title>{% block page_title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+
+        
+    </head>
+    <body {% block extra_body %}{% endblock %}>
+        <div id="container">
+            {% block page_header %}{% endblock %}
+            {% block content %}{% endblock %}
+
+            
+        </div>
+
+        <div id="stickybar" class="expstickybar">
+
+            <div id="mag-footer-toggle-button">
+                <img src="http://dev.magneticcreative.com/wp-content/themes/magnetic/images/mag-footer-toggle-button.png" alt="toggle" />
+            </div>
+
+            <div id="ftr-wrapper">
+
+                <div class="container">
+
+                    <div class="topdata">
+                        <h1>Nathaniel Clark</h1>
+                        <p class="subline">Dev/Ops, Team Leader, Developer</p>
+                        <hr />
+                    </div>
+
+                    <div class="infodata">
+                        <p>Dedicated and proficient Developer. Leader of high-performance teams. Digital Strategist anticipating trends. Mobile first! Hyper-obsessed with automation. Seeks interpenetration of fields for business solutions; Technology in all layers. Simple solutions for complex problems. Tattoo on arm says “Building The Future”.</p>
+
+                        <p><strong>Development</strong>: Python/Django, PHP, HTML/CSS, Javascript, jQuery, jQuery Touch, Ember.js, (My|MS)SQL, C#/.NET, ASP Classic</p>
+                        <p><strong>Dev/Ops</strong>: Git DVCS, Heroku, Amazon S3/Glacier, Amazon EC2, CentOS/Ubuntu, IIS 6/7, SQL Server, Github, Bitbucket</p>
+                        <p><strong>Management</strong>: Team Leadership, Use-Case Design, Project Estimates &amp; Tracking, Requirements Docs, Presentation Design (PowerPoint, Keynote), Public Speaking, JIRA, Basecamp, Omniplan</p>
+                        <p><strong>Design-ware</strong>: Photoshop, Illustrator, Omnigraffle, InDesign</p>
+
+                        <div id="recentEvents" style="width: 45%; height: 150px; float: left;"></div>
+                        <div id="work-breakdown" style="width: 45%; height: 150px;float: left;"></div>
+
+                    </div>
+
+                    <ul id="social">
+                        <li><a href="#">T</a></li>
+                        <li><a href="#">F</a></li>
+                        <li><a href="#">P</a></li>
+                        <li><a href="#">G+</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div><!--// end stickybar -->
+
+
+        
+
+        {% block analytics %}{% endblock %}
+
+        <!--// CDN js scripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+
+        <!--// local js scripts -->
+        <script src="{{ url_for('static', filename='js/jquery.cycle.all.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.maximage.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.isotope.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/underscore-min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/processing-1.4.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+        <script>
+            new Morris.Line({
+              // ID of the element in which to draw the chart.
+              element: 'recentEvents',
+              // Chart data records -- each entry in this array corresponds to a point on
+              // the chart.
+              data: [
+                { year: '2008', value: 20 },
+                { year: '2009', value: 10 },
+                { year: '2010', value: 5 },
+                { year: '2011', value: 5 },
+                { year: '2012', value: 20 }
+              ],
+              // The name of the data record attribute that contains x-values.
+              xkey: 'year',
+              // A list of names of data record attributes that contain y-values.
+              ykeys: ['value'],
+              // Labels for the ykeys -- will be displayed when you hover over the
+              // chart.
+              labels: ['Value']
+            });
+
+            new Morris.Donut({
+              element: 'work-breakdown',
+              data: [
+                {label: "Development", value: 29},
+                {label: "Communication", value: 17},
+                {label: "Design/Composition", value: 16},
+                {label: "Uncategorized", value: 12},
+                {label: "Business", value: 8}
+              ],
+              labels: ['Development', 'Communication']
+            });
+
+        </script>
+
+        {% block extra_js_footer %}{% endblock %}
+
+
+
+    </body>
+</html>

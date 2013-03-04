@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page_title %}NSC Grid Page{% endblock %}
+
+{% block extra_body %}id="resume"{% endblock %}
+
+{% block page_header %}{% endblock %}
+
+{% block content %}
+<div id="crawler-pde" class="bkg-gradient">
+
+	<canvas data-processing-sources="{{ url_for('static', filename='pde/point_crawler.pde') }}"></canvas>
+
+</div><!-- #wrapper -->
+
+{% endblock %}
+
+

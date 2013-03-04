@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/natxty/Documents/production_sites/kia-flask"
+VIRTUAL_ENV="/Users/natxty/Documents/production_sites/nsc-flask"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

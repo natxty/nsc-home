@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block page_title %}NSC Grid Page{% endblock %}
+
+{% block extra_body %}id="resume"{% endblock %}
+
+{% block page_header %}{% endblock %}
+
+{% block content %}
+<div id="resume-content" class="bkg-gradient">
+
+
+	<div id="container">
+
+		{% for element in elements %}
+			<div class="item">
+				{{ element }}
+			</div>
+		{% endfor %}
+	</div>
+
+</div><!-- #wrapper -->
+
+{% endblock %}
+
+{% block extra_js_footer %}
+<script type="text/javascript" src="{{ STATIC_URL}}js/jquery.isotope.min.js"></script>
+<script>
+	$('#container').isotope({
+	  // options
+	  itemSelector : '.item',
+	  masonry: {
+	  }
+	});
+</script>
+{% endblock %}

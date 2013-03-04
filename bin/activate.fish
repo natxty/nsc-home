@@ -27,7 +27,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/natxty/Documents/production_sites/kia-flask"
+set -gx VIRTUAL_ENV "/Users/natxty/Documents/production_sites/nsc-flask"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
