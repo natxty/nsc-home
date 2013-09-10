@@ -1,5 +1,10 @@
+
 $(document).ready(function() {
 
+	windowHeight = $(window).height();
+	windowWidth = $(window).width();
+
+	/* removed for the moment. needs to be worked thru.
 
 	$(".slider_thumb").hover(
 	  function () {
@@ -9,7 +14,7 @@ $(document).ready(function() {
 	  	$(this).filter('#slider_thumb_left').animate({ left: '-=30'}).end().filter('#slider_thumb_right').animate({ right: '-=30'});
 	  }
 	);
-
+	*/
 
 	/* Slide Images */
 	$(function(){
@@ -36,9 +41,6 @@ $(document).ready(function() {
 		$('.slider_thumb').fadeIn();
 
 	});
-
-
-
 
 	/** Footer Section on Home Page w00t */
 	/*Expandable Sticky Bar (Initial: Nov 1st, 2010)

@@ -1,0 +1,261 @@
+/* Base Layout */
+body {
+	background: #fff;
+	color: #424242;
+	padding: 0;
+	height: 100%; width: 100%;
+}
+
+a.enhanced_toggleResult {
+	display: none;
+}
+
+a, a:visited {
+  outline: 0 none;
+  color: royalblue;
+  text-decoration: none;
+}
+
+a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+dl {
+	margin:0;
+}
+
+dl dt b {
+	font-weight:normal;
+}
+
+dl dd {
+	margin:0;
+}
+
+.bkg-gradient {
+	/* background: url("images/bkg-gradient.png") repeat-x scroll 0 100% #000; */
+}
+
+body .centered {
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+
+body .left-centered {
+	position:absolute;
+	top:50%;
+	left:0;
+}
+
+body .right-centered {
+	position:absolute;
+	top:50%;
+	left:100%;
+}
+
+body .top-centered {
+	position:absolute;
+	top:0;
+	left:50%;
+}
+
+body .bottom-centered {
+	position:absolute;
+	top:100%;
+	left:50%;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Home Page Footer Evyl Magick */
+.expstickybar{
+	position:fixed;
+	color: white;
+	padding: 1px;
+	right:0; /*horizontally center bar in window*/
+	left:0; /*horizontally center bar in window*/
+	visibility:hidden;
+	background: none;
+	z-index: 10000;
+	width:auto; /*set width of bar to width of entire window*/
+	font-weight:bold;
+}
+
+.expstickybar a{
+	color: white;
+}
+
+#mag-footer-toggle-button {
+	width: 100%;
+	text-align: center;
+	height: 45px;
+}
+
+#mag-footer-toggle-button img {
+	width: 85px;
+	cursor: pointer;
+}
+
+/* Nav Elements, Globalized */
+.slider_thumb {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	opacity: 0.2;
+}
+
+#slider_thumb_left {
+	left: 0;
+	background: url('../images/arrowwprev.png') top left no-repeat;
+}
+
+#slider_thumb_right {
+	right: 0;
+	background: url('../images/arroww.png') top left no-repeat;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px; 
+  text-align: center;
+  /* width and height can be anything, as long as they're equal */
+}
+
+.circle .txt {
+	padding-top: 40px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.magcolor {
+	background: #0c98d4;
+}
+
+#ftr-wrapper {
+	height: 680px;
+	padding: 20px;
+	background: #efefef;
+	color: #424242;
+	font-weight: normal;
+}
+
+#ftr-wrapper .container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#ftr-wrapper .container h1 {
+	margin-bottom: 0;
+}
+
+#ftr-wrapper .container p.subline {
+	margin-top: 0;
+	font-style: italic;
+	color: #696969;
+}
+
+#ftr-wrapper .container .infodata {
+	padding: 2% 5% 5%;
+}
+
+/* ============================================================================== */
+/* Resume
+/* ============================================================================== */
+
+body#resume #content {
+  margin-top: 0;
+}
+
+#resume-strip {
+  background: #000;
+  color: #efefef;
+  height: 20px;
+  padding: 4px 0 4px 10px;
+}
+
+#resume-strip a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+
+#resume-content {
+  margin: 50px 10px 0 40px;
+}
+
+#resume-content #container {
+  /* either of these will work for horizontal Isotope layouts */
+  height: 80%;
+}
+
+#resume-content #container .item {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  clear: left;
+}
+
+#resume .section {
+  height: auto;
+}
+
+#resume-content h2 {
+  clear: both;
+  margin-top: 60px;
+}
+
+#resume-content h2:first-child {
+  margin-top: 20px;
+}
+
+#resume-content h3 {
+  width: 50px;
+  float: left;
+  clear: left;
+  margin: 0;
+  padding: 0;
+  vertical-align: text-top;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+/*
+#resume-content #container .item ul {
+  margin: 0 0 20px 10px;
+  padding: 0;
+  width: 290px;
+  float: left;
+}
+
+#resume-content #container .item li {
+  width: 290px;
+}
+
+#resume-content .section ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#resume-content hr {
+  float: left;
+  clear: both;
+  width: 500px;
+  color: #ccc;
+  background-color: #ccc;
+  height: 1px;
+  margin: 10px 0 20px;
+}
+*/

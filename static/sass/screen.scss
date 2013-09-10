@@ -1,0 +1,280 @@
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// Font Awesome:
+@import "font-awesome";
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+}
+
+form.bp {
+  @include blueprint-form;
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  @include blueprint-scaffolding;
+}
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body.two-col {
+  #container {
+    @include container;
+  }
+  #header, #footer {
+    @include column($blueprint-grid-columns);
+  }
+  #sidebar {
+    // One third of the grid columns, rounding down. With 24 cols, this is 8.
+    $sidebar-columns: floor($blueprint-grid-columns / 3);
+    @include column($sidebar-columns);
+  }
+  #content {
+    // Two thirds of the grid columns, rounding up.
+    // With 24 cols, this is 16.
+    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
+    // true means it's the last column in the row
+    @include column($content-columns, true);
+  }
+}
+
+
+/* Base Layout */
+body {
+	background: #fff;
+	color: #424242;
+	padding: 0;
+	height: 100%; width: 100%;
+}
+
+a.enhanced_toggleResult {
+	display: none;
+}
+
+a, a:visited {
+  outline: 0 none;
+  color: royalblue;
+  text-decoration: none;
+}
+
+a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+dl {
+	margin:0;
+}
+
+dl dt b {
+	font-weight:normal;
+}
+
+dl dd {
+	margin:0;
+}
+
+.bkg-gradient {
+	/* background: url("images/bkg-gradient.png") repeat-x scroll 0 100% #000; */
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.slidepane {
+
+}
+
+.text-wrap {
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	margin-top: -50px;
+}
+
+.largish {
+	font-size: 5em;
+}
+
+.serif {
+	font-family: 'Merriweather',Georgia,serif;
+}
+
+.text-white-bg {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 12px;
+	margin: 4px 10px;
+	color: #000;
+}
+
+
+/* Home Page Footer Evyl Magick */
+.expstickybar{
+	position:fixed;
+	color: white;
+	padding: 1px;
+	right:0; /*horizontally center bar in window*/
+	left:0; /*horizontally center bar in window*/
+	visibility:hidden;
+	background: none;
+	z-index: 10000;
+	width:auto; /*set width of bar to width of entire window*/
+	font-weight:bold;
+
+	a {
+		color: white;
+	}
+}
+
+
+#mag-footer-toggle-button {
+	width: 100%;
+	text-align: center;
+	height: 45px;
+
+	img {
+		width: 85px;
+		cursor: pointer;
+	}
+}
+
+/* Nav Elements, Globalized */
+.slider_thumb {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	opacity: 0.2;
+}
+
+#slider_thumb_left {
+	left: 0;
+	background: url('../images/arrowwprev.png') top left no-repeat;
+}
+
+#slider_thumb_right {
+	right: 0;
+	background: url('../images/arroww.png') top left no-repeat;
+}
+
+.magcolor {
+	background: #0c98d4;
+}
+
+#ftr-wrapper {
+	height: 680px;
+	padding: 20px;
+	background: #efefef;
+	color: #424242;
+	font-weight: normal;
+
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+
+		h1 {
+			font-family: 'Droid Sans', sans-serif;
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+
+		ul {
+			list-style: none;
+			margin-bottom: 30px;
+		}
+
+		li {
+			padding: 0.5% 0;
+		}
+
+		p, li {
+			font-family: 'Droid Sans', sans-serif;
+			font-size: 120%;
+		}
+
+		p.subline {
+			margin: 0 0 2%;
+			font-style: italic;
+			color: #696969;
+		}
+
+		.infodata {
+			padding: 2% 2% 3%;
+			@include clearfix;
+		}
+
+	}
+}
+
+.chart-wrapper {
+	text-align: center;
+	height: 200px;
+	width: 47%;
+	float: left;
+	@include clearfix;
+
+	&.work {
+	 	border-left: 1px solid #ccc;
+	}
+
+	h4 {
+		font-family: 'Droid Sans', sans-serif;
+		font-weight: 700!important;
+	}
+}
+
+#recentEvents, #work-breakdown {
+	height: 150px;
+	width: 100%;
+}
+
+
+ul#social {
+	clear: both;
+	margin-top: 30px; 
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin-right: 30px;
+
+		a {
+			text-decoration: none;
+			color: #424242;
+			
+			&:hover {
+				color: $baseBlue;
+			}
+
+		}
+
+
+	}
+}

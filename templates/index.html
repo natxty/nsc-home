@@ -2,6 +2,8 @@
 
 {% block page_title %}NSC Homepage{% endblock %}
 
+{% block extra_body %}class="home bp"{% endblock %}
+
 {% block page_header %}{% endblock %}
 
 {% block content %}
@@ -13,6 +15,15 @@
             {% for slide in matrix %}
             <div class="slidepane">
                 <img src="{{ url_for('static', filename='images/' + slide.slide) }}" alt="" />
+                <div class="text-wrap">
+                	{% if slide.msg1 %}
+                	<div class="largish serif">
+                	<span class="text-white-bg">{{ slide.msg1 }} </span>
+                	{% if slide.msg2 %}<br><span class="text-white-bg">{{ slide.msg2 }}</span>{% endif %}
+                	{% endif %}
+               	</div>
+                </div>
+
             </div>
             {% endfor %}
         
