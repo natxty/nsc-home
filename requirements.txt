@@ -1,4 +1,6 @@
 Flask==0.9
 Jinja2==2.6
+Pattern==2.5
 Werkzeug==0.8.3
+sorl-thumbnail==11.12
 wsgiref==0.1.2
